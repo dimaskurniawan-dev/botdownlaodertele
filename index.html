@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Verification</title>
+    <!-- Import Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0a1324; /* Dark Navy khas lo */
+            --accent: #ffd700; /* Gold Luxury */
+            --text-main: #ffffff;
+            --text-dim: #94a3b8;
+        }
+
+        body {
+            margin: 0;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .main-card {
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+        }
+
+        .logo-placeholder {
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 4px;
+            color: var(--accent);
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            opacity: 0.8;
+        }
+
+        h1 {
+            font-size: 20px;
+            font-weight: 500;
+            letter-spacing: -0.5px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            color: var(--text-dim);
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+
+        .loader-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 120px;
+        }
+
+        #timer {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+
+        .btn-premium {
+            display: none;
+            background-color: var(--accent);
+            color: var(--bg-color);
+            padding: 16px 40px;
+            border-radius: 100px; /* Pill shape clean */
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.15);
+        }
+
+        .btn-premium:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(255, 215, 0, 0.25);
+            background-color: #fff;
+        }
+
+        .footer-note {
+            margin-top: 60px;
+            font-size: 11px;
+            color: #334155;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-card">
+        <div class="logo-placeholder">SYSTEM VERIFICATION</div>
+        
+        <div class="loader-container">
+            <div id="timer-wrapper">
+                <div id="timer">10</div>
+                <p id="status-text">Menyiapkan link download premium...</p>
+            </div>
+            
+            <!-- Ganti NAMA_BOT_LO sesuai username bot lo -->
+            <a href="https://t.me/NAMA_BOT_LO?start=VERIFIED" class="btn-premium" id="btn">Get Access Now</a>
+        </div>
+
+        <div class="footer-note">SECURE ACCESS • ENCRYPTED CONNECTION</div>
+    </div>
+
+    <script>
+        // Link Adsterra lo bang
+        const adLink = "https://www.profitablecpmratenetwork.com/hgnqasba?key=ede47bd8ef264089dffa1f99688a598d";
+
+        window.onclick = function() {
+            window.open(adLink, '_blank');
+            window.onclick = null; 
+        };
+
+        let count = 10;
+        const timerDisplay = document.getElementById('timer');
+        const statusText = document.getElementById('status-text');
+        const actionBtn = document.getElementById('btn');
+        const timerWrapper = document.getElementById('timer-wrapper');
+
+        const countdown = setInterval(() => {
+            count--;
+            timerDisplay.textContent = count;
+            
+            if (count <= 0) {
+                clearInterval(countdown);
+                timerWrapper.style.display = 'none';
+                actionBtn.style.display = 'inline-block';
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
